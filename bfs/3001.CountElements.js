@@ -22,21 +22,17 @@
  */
 var maxFrequencyElements = function (nums) {
   const frequenceHit = new Map()
+  const queue = []
 
   for (let index = 0; index < nums.length; index++) {
     frequenceHit.set(nums[index], (frequenceHit.get(nums[index]) || 0) + 1)
   }
 
-  const queue = []
-  const freqTrack = []
-
   frequenceHit.forEach((value, key) => {
     queue.push({ num: key, freq: value })
-    freqTrack.push({ num: key, freq: value })
   })
 
   //BFS
-
   let maxFreq = 0
   let maxCountOfFreq = 0
 
