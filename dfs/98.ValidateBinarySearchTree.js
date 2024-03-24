@@ -13,21 +13,17 @@
 
 var isValidBST = function (root) {
   function dfs(node) {
-    if (!node) return null // Base case: Empty tree is valid
+    if (!node) return null
 
-    // Check left subtree, but continue even if a violation is found there
     const leftViolation = dfs(node.left)
     if (leftViolation !== null && leftViolation >= node.val) return node.val
 
-    // Check right subtree, but continue even if a violation is found there
     const rightViolation = dfs(node.right)
     if (rightViolation !== null && rightViolation <= node.val) return node.val
 
-    // No violation found in current node or its subtrees
     return null
   }
 
-  // Start traversal from the root node
   const violation = dfs(root)
-  return violation === null // Return true if no violations found, false otherwise
+  return violation === null
 }
