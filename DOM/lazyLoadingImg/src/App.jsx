@@ -52,7 +52,7 @@ function App() {
 
     const { image_url } = await data.json()
 
-    setCards((prevCards) => [...prevCards, { desc: '', img: image_url }])
+    return image_url
   }
 
   useEffect(() => {
@@ -65,7 +65,9 @@ function App() {
 
       if (!lastCardEntry.isIntersecting) return // Don't load if still visible
 
-      await loadNewCards()
+      loadNewCards().then((image_url) => {
+        setCards((prevCards) => [...prevCards, { desc: '', img: image_url }])
+      })
 
       // Update last card reference after new card is added
       lastCardRef.current =
