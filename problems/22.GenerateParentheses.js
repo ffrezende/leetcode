@@ -23,3 +23,21 @@ var generateParenthesis = function (n) {
 
   return results
 }
+
+class Person {
+  constructor(name, id) {
+    this.name
+    this.id
+  }
+
+  getName = () => {
+    return `${this.name} + ${this.id}`
+  }
+}
+
+class House extends Person {
+  constructor(name, id, house) {
+    super(name, id)
+    this.house = house
+  }
+}

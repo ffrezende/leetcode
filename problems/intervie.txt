@@ -1,0 +1,30 @@
+array 
+leader ships  - first 
+
+--------------------------------
+Data structures -> parking a lot -> gas station -> petrol storage  -> infinity capacity 
+
+find the index -> HashMap
+
+
+---------------------------------------------------------------
+customer snarios -> logical 
+
+calculate of the number of calculate of evoluate ((()))
+
+
+------------------------------------------------
+culture, delivery results, spent time
+
+let code intetview
+-----------------
+Daniel 
+
+wheather reporter -> 1 milion / geograifc area 
+frequence / report / input out put ->
+
+- negative / + temperatury
+
+storage / data
+
+parking a lot

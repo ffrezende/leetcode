@@ -35,6 +35,24 @@ const merge = (nums1, m, nums2, n) => {
   return sorted
 }
 
+const merge3 = (array1, n, array2, m) => {
+  let sizeArray1 = n - 1
+  let sizeArray2 = m - 1
+  let totalSize = n + m - 1
+
+  while (sizeArray1 >= 0 && sizeArray2 >= 0) {
+    if (array1[sizeArray1] > array2[sizeArray2]) {
+      array1[totalSize--] = array1[sizeArray1]
+    } else {
+      array1[totalSize--] = array2[sizeArray1]
+    }
+  }
+
+  while (sizeArray2 >= 0) {
+    array1[totalSize--] = array2[sizeArray1]
+  }
+}
+
 //Version 2
 const merge2 = (nums1, m, nums2, n) => {
   let i = m - 1
